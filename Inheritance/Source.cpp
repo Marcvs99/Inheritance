@@ -13,4 +13,9 @@ int main()
 	Car v1;
 	
 	v1.displayInfo();
+
+	Truck t1;
+	Truck t2(200, 1999, "Ford");
+	t1.displayInfo();
+	t2.displayInfo();
 }
