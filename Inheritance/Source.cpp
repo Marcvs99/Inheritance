@@ -10,12 +10,66 @@
 
 int main()
 {
-	Car v1;
-	
+	int year = 0;
+	std::string manufacturer = "";
+	int doors = 0;
+	int towingCapacity = 0;
+
+	std::cout << "Enter year of manufacture" << '\n';
+
+	std::cin >> year;
+
+	std::cout << "Enter manufacturer" << '\n';
+
+	std::cin.ignore(INT_MAX, '\n');
+	std::cin.clear();
+
+	std::getline(std::cin, manufacturer, '\n');
+
+	Vehicle v1(year, manufacturer);
 	v1.displayInfo();
 
-	Truck t1;
-	Truck t2(200, 1999, "Ford");
+	std::cout << '\n';
+
+
+	std::cout << "Enter year of manufacture" << '\n';
+
+	std::cin >> year;
+
+	std::cout << "Enter manufacturer" << '\n';
+
+	std::cin.ignore(INT_MAX, '\n');
+	std::cin.clear();
+
+	std::getline(std::cin, manufacturer, '\n');
+
+	std::cout << "Enter number of doors" << '\n';
+
+	std::cin >> doors;
+
+	Car c1(doors, year, manufacturer);
+	c1.displayInfo();
+
+	std::cout << '\n';
+
+
+	std::cout << "Enter year of manufacture" << '\n';
+
+	std::cin >> year;
+
+	std::cout << "Enter manufacturer" << '\n';
+
+	std::cin.ignore(INT_MAX, '\n');
+	std::cin.clear();
+
+	std::getline(std::cin, manufacturer, '\n');
+
+	std::cout << "Enter towing capacity" << '\n';
+
+	std::cin >> towingCapacity;
+
+	Truck t1(towingCapacity, year, manufacturer);
 	t1.displayInfo();
-	t2.displayInfo();
+
+	std::cout << '\n';
 }
